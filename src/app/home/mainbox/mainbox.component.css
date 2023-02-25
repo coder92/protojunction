@@ -1,0 +1,78 @@
+.mainbox {
+  background-color: #343642;
+  padding: 50px 30px;
+}
+
+.mainbox__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.mainbox__heading {
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #f7f7f7;
+  font-weight: 500;
+}
+
+.mainbox__detail {
+  color: white;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  margin: 30px 0 70px 0;
+}
+
+.quote {
+  width: 250px;
+  max-width: 60vw;
+  padding: 2px;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* TABLET 426px to 768px */
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .mainbox {
+    background-image: url("/assets/img/home/bgmain-small.svg");
+    background-repeat: no-repeat;
+    background-position: 95% 95%;
+  }
+
+  .mainbox__content {
+    margin: 50px auto;
+  }
+}
+
+/* -------------------------------------------------------------------------------- */
+/* TABLET 769px to 1024px */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .mainbox {
+    background-image: url("/assets/img/home/bgmain-med.svg");
+    background-repeat: no-repeat;
+    background-position: 98% center;
+    background-size: 300px;
+  }
+
+  .mainbox__content {
+    margin: 50px auto;
+  }
+}
+
+/* -------------------------------------------------------------------------------- */
+/* LAPTOP 1025px and more*/
+@media only screen and (min-width: 1025px) {
+  .mainbox {
+    background-color: #3b3c40;
+    background-image: url("/assets/img/home/bgmain-big.jpg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    /* background-size: 110%; */
+  }
+
+  .mainbox__content {
+    margin: 50px;
+  }
+}

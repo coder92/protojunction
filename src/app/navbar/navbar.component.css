@@ -1,0 +1,281 @@
+/* COMMON CSS */
+
+nav {
+  position: sticky;
+  top: 0;
+  height: 65px;
+  background-color: white;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
+  border-bottom: solid 1px #efefef;
+  z-index: 10;
+}
+
+nav .wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper .logo {
+  height: 65px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .logo img {
+  height: 50px;
+}
+
+/* nav links */
+
+.nav-links > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #38393d;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 0 15px;
+  cursor: pointer;
+  height: 100%;
+}
+
+.mega-content li {
+  list-style: none;
+  line-height: 35px;
+  margin: 5px 0;
+  max-width: 200px;
+  width: 100%;
+}
+
+.mega-content li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #595f6f;
+  padding: 0 10px;
+  width: 100%;
+  border-radius: 25px;
+  font-size: 15px;
+  transition: background-color 200ms ease;
+}
+
+.mega-content li:hover a {
+  background-color: rgb(242, 242, 242);
+  color: rgb(7, 98, 200);
+}
+
+.megacontent-image {
+  position: absolute;
+  top: 10%;
+  left: 60%;
+  max-height: 80%;
+  max-width: 35%;
+  visibility: hidden;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 500ms ease;
+}
+
+.arrow-icon {
+  visibility: hidden;
+}
+
+/* user links */
+
+.wrapper .user-links {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  margin-right: 15px;
+}
+
+.active {
+  color: rgb(7, 98, 200) !important;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* MOBILE DEVICES */
+
+@media only screen and (max-width: 768px) {
+  nav .menu-icon {
+    height: 65px;
+    float: left;
+    position: absolute;
+    z-index: 10;
+    padding: 5px;
+    font-size: 30px;
+    color: black;
+    display: flex;
+    align-items: center;
+  }
+
+  .sidebaroff {
+    transform: translateX(-100%);
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    transition: all 400ms ease-in;
+  }
+
+  .overlay-on .overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .wrapper .logo {
+    margin-left: 25px;
+  }
+
+  .wrapper .nav-links {
+    display: block;
+    height: 100vh;
+    width: 80%;
+    max-width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 50px 20px;
+    overflow-y: auto;
+    z-index: 2;
+    background-color: white;
+    transition: all 300ms ease;
+  }
+
+  .nav-links > li {
+    list-style: none;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links > li > a {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0 5px 0;
+  }
+
+  .nav-links .mega-menu {
+    padding-left: 10px;
+  }
+
+  .mega-head {
+    display: none;
+  }
+}
+
+/* -------------------------------------------------------------------------------- */
+/* LARGER DEVICES */
+
+@media only screen and (min-width: 769px) {
+  nav .menu-icon {
+    display: none;
+  }
+
+  .wrapper .nav-links {
+    display: flex;
+  }
+
+  .nav-links > li {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    transition: all 250ms ease;
+  }
+
+  .nav-links > li:hover {
+    border-bottom: solid 2px red;
+  }
+
+  .nav-links .mega-menu {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
+    max-height: calc(95vh - 65px);
+    overflow: auto;
+  }
+
+  .mega-head {
+    width: 28%;
+    text-align: center;
+    margin: 2%;
+    color: #595f6f;
+  }
+
+  .mega-head h1 {
+    color: #38393d;
+  }
+
+  .megahead-icon {
+    font-size: 100px;
+    color: #e2e8ed;
+    margin: 10px;
+    transition: color 200ms ease-in-out;
+    cursor: default;
+  }
+
+  .megahead-icon:hover {
+    color: #c5d1d8;
+  }
+
+  .mega-content {
+    width: 25%;
+    border-left: 1px solid rgb(239, 239, 239);
+    margin: 1%;
+    padding-left: 25px;
+  }
+
+  .mega-content > ul > li:hover .megacontent-image {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .mega-content li:hover .arrow-icon {
+    visibility: visible;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+
+/* -------------------------------------------------------------------------------- */
+/* TABLET 769px - 1024px */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .mega-head {
+    width: 40%;
+  }
+
+  .mega-content {
+    width: 40%;
+  }
+
+  .mega-content > ul > li:hover .megacontent-image {
+    display: none;
+  }
+
+  .mega-content li:hover .arrow-icon {
+    visibility: hidden;
+  }
+}
+
+/* -------------------------------------------------------------------------------- */

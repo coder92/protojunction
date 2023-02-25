@@ -1,0 +1,47 @@
+.industrybox {
+  background-color: #f6f6f6;
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.industrybox h2 {
+  margin: 30px;
+  text-align: center;
+  transition: 500ms ease;
+}
+
+.industrybox h2:hover {
+  border-bottom: 2px solid red;
+}
+
+.industrybox__content {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card {
+  min-width: 110px;
+  width: 20%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__icon {
+  color: #b2b2b2;
+  font-size: 60px;
+  font-weight: 100;
+  padding: 15px;
+  padding-bottom: 5px;
+}
+
+.card__title {
+  color: #70706f;
+}

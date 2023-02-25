@@ -1,0 +1,99 @@
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+
+<div class="whatsapp">
+  <a href="https://wa.me/+918901669558?text=Hi..! " target="_blank">
+    <img src="/assets/icon/wa-contact.svg" alt="logo" />
+  </a>
+</div>
+
+<footer>
+  <div class="logo">
+    <a routerLink="/">
+      <img src="/assets/img/logo.svg" alt="logo" height="50px" />
+    </a>
+    <p>Turning Imagination</p>
+    <p>into Reality.</p>
+
+    <!-- Social Media -->
+    <div class="social">
+      <a href="" class="social-icon">
+        <img src="/assets/icon/social/facebook.png" alt="facebook" />
+      </a>
+
+      <a href="" class="social-icon">
+        <img src="/assets/icon/social/instagram.png" alt="instagram" />
+      </a>
+
+      <a href="" class="social-icon">
+        <img src="/assets/icon/social/twitter.png" alt="twitter" />
+      </a>
+
+      <a href="" class="social-icon">
+        <img src="/assets/icon/social/linkedin.png" alt="linkedin" />
+      </a>
+
+      <a href="" class="social-icon">
+        <img src="/assets/icon/social/pinterest.png" alt="pinterest" />
+      </a>
+    </div>
+  </div>
+
+  <div class="footerbox">
+    <h5>SERVICES</h5>
+    <ul>
+      <li *ngFor="let service of services">{{ service.name }}</li>
+    </ul>
+  </div>
+
+  <div class="footerbox">
+    <h5>INDUSTRIES</h5>
+    <ul>
+      <li *ngFor="let industry of industries">{{ industry.name }}</li>
+    </ul>
+  </div>
+
+  <div class="footerbox">
+    <h5>COMPANY</h5>
+    <ul>
+      <li>About Us</li>
+      <li><a [routerLink]="['/blog']" routerLinkActive="active"> Blog </a></li>
+      <li>Career</li>
+    </ul>
+  </div>
+
+  <div class="footerbox">
+    <h5>CONTACT</h5>
+
+    <ul>
+      <!-- whatsapp -->
+      <li>
+        <span class="material-icons contact-icon"> chat </span>
+        <a href="https://wa.me/+918901669558?text=Hi..! " target="_blank">
+          Chat with us
+        </a>
+      </li>
+
+      <!-- Call -->
+      <li>
+        <span class="material-icons contact-icon"> phone </span>
+        <a href="tel:+91 8901669558" target="_blank"> +91 8901669558 </a>
+      </li>
+
+      <!-- E-mail -->
+      <li>
+        <span class="material-icons contact-icon"> email </span>
+        <a href="mailto:support@protojunction.com" target="_blank">
+          support@protojunction.com
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<div class="copyright">
+  <p>&copy;2021 protojunction. All Rights Reserved.</p>
+  <p>Crafted in India with ❤️</p>
+</div>

@@ -1,0 +1,14 @@
+<div class="servicebox">
+  <h2>Our Offerings</h2>
+
+  <div class="servicebox__detail">
+    <img src="/assets/img/home/servicebox/service.svg" alt="" width="400px" />
+
+    <div class="servicebox__content">
+      <div class="card" *ngFor="let service of services">
+        <h4 class="card__title">{{ service.name }}</h4>
+        <img class="card__image" src="{{ service.image }}" alt="" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+/* mainbox */
+
+/* servicebox */
+
+/* industrybox */
+
+/* -------------------------------------------------------------------------------- */
+/* TABLET 769px to 1024px */
+
+/* -------------------------------------------------------------------------------- */
+/* LAPTOP 1025px and more*/
+@media only screen and (min-width: 1025px) {
+  .mainbox {
+    background-image: url("/assets/img/home/homepage.jpg");
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+}

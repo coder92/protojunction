@@ -1,0 +1,111 @@
+<nav [class.overlay-on]="!sidemenuoff">
+  <span class="material-icons menu-icon" (click)="sidemenuoff = !sidemenuoff">
+    {{ sidemenuoff ? "menu" : "close" }}
+  </span>
+
+  <div class="wrapper">
+    <!-- logo -->
+    <div class="logo">
+      <a routerLink="/"> <img src="/assets/img/logo.svg" alt="logo" /> </a>
+    </div>
+
+    <!-- navigation links -->
+    <ul class="nav-links" [class.sidebaroff]="sidemenuoff">
+      <!-- Services -->
+      <li (clickOutside)="ServiceOff()">
+        <a (click)="ServiceOn()">
+          Services
+          <span class="material-icons mobile">
+            {{ servicemenuoff ? "expand_more" : "expand_less" }}
+          </span>
+        </a>
+
+        <div class="mega-menu" *ngIf="!servicemenuoff">
+          <div class="mega-head">
+            <h1>SERVICES</h1>
+            <p>
+              We evaluate and deliver the best manufacturing solutions for your
+              products
+            </p>
+            <span class="material-icons megahead-icon">
+              precision_manufacturing
+            </span>
+          </div>
+
+          <div class="mega-content">
+            <ul>
+              <li *ngFor="let service of services" (click)="ServiceOff()">
+                <a href="#">
+                  {{ service.name }}
+                  <span class="material-icons arrow-icon"> chevron_right </span>
+                </a>
+                <img class="megacontent-image" src="{{ service.image }}" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <!-- Industries -->
+      <li (clickOutside)="IndustryOff()">
+        <a (click)="IndustryOn()">
+          Industries
+          <span class="material-icons mobile">
+            {{ industrymenuoff ? "expand_more" : "expand_less" }}
+          </span>
+        </a>
+
+        <div class="mega-menu" *ngIf="!industrymenuoff">
+          <div class="mega-head">
+            <h1>INDUSTRIES</h1>
+            <p>
+              We evaluate and deliver the best manufacturing solutions for your
+              products
+            </p>
+            <span class="material-icons megahead-icon"> electric_moped </span>
+          </div>
+
+          <div class="mega-content">
+            <ul>
+              <li *ngFor="let industry of industries" (click)="IndustryOff()">
+                <a href="#">
+                  {{ industry.name }}
+                  <span class="material-icons arrow-icon"> chevron_right </span>
+                </a>
+                <img class="megacontent-image" src="{{ industry.image }}" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <!-- Store -->
+      <li>
+        <a [routerLink]="['/store']" routerLinkActive="active"> Store </a>
+      </li>
+
+      <!-- Blog -->
+      <li>
+        <a [routerLink]="['/blog']" routerLinkActive="active"> Blog </a>
+      </li>
+    </ul>
+
+    <!-- User Linnks -->
+    <div class="user-links">
+      <!-- <a href="#">
+        <span class="material-icons user-icon"> person </span>
+      </a>
+
+      <a href="#">
+        <span class="material-icons user-icon"> shopping_cart </span>
+      </a> -->
+
+      <app-getquote>
+        <p>Quote</p>
+      </app-getquote>
+    </div>
+  </div>
+
+  <!-- overlay -->
+  <div class="overlay" (click)="sidemenuoff = !sidemenuoff"></div>
+</nav>

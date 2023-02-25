@@ -1,0 +1,12 @@
+<div class="industrybox">
+  <h2>Industries we serve</h2>
+
+  <div class="industrybox__content">
+    <div *ngFor="let industry of industries" class="card">
+      <span class="material-icons card__icon">
+        {{ industry.icon }}
+      </span>
+      <h5 class="card__title">{{ industry.name }}</h5>
+    </div>
+  </div>
+</div>
